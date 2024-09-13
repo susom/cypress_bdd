@@ -5,6 +5,7 @@ const username = Cypress.env('CYPRESS_USERNAME');
 const password = Cypress.env('CYPRESS_PASSWORD');
 
 Given('the user navigates to the login page', () => {
+    cy.task("log", {username, password});
     visitLoginPage();
 });
 

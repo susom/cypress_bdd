@@ -1,6 +1,11 @@
 const { defineConfig } = require('cypress');
+const dotenv = require('dotenv');
+const path = require('path');
 const addCucumberPreprocessorPlugin = require('@badeball/cypress-cucumber-preprocessor').addCucumberPreprocessorPlugin;
 const browserify = require('@badeball/cypress-cucumber-preprocessor/browserify').default;
+
+// Load environment variables from .env file
+dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 module.exports = defineConfig({
   e2e: {
