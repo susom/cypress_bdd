@@ -1,0 +1,27 @@
+services:
+  cypress:
+    build:
+      context: .
+      dockerfile: ./cypress/Dockerfile
+    volumes:
+      - ./cypress/cypress.config.js:/app/cypress.config.js
+      - ./cypress/e2e:/app/e2e
+      - ./cypress/plugins:/app/plugins
+      - ./cypress/support:/app/support
+    working_dir: /app
+    network_mode: "host"
+    env_file:
+      - .env
+    entrypoint: ["npx", "cypress", "run"]
+
+  ai:
+    build:
+      context: .
+      dockerfile: ./ai_scripts/Dockerfile
+    volumes:
+      - ./ai_scripts:/app/ai_scripts
+      - ./cypress/e2e:/app/cypress/e2e
+      - ./cypress/support:/app/cypress/support
+    working_dir: /app
+    env_file:
+      - .env

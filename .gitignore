@@ -1,0 +1,101 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/package-lock.json
+/.pnp
+.pnp.js
+
+# Dependency directories
+bower_components/
+
+# Cypress logs and screenshots
+cypress/screenshots/
+cypress/videos/
+results/
+
+# dotenv environment variables file
+.env
+.env.local
+.env.*.local
+
+# Cypress local settings (to prevent committing Cypress-related settings that are local)
+cypress.json
+cypress.env.json
+
+# Build artifacts (general)
+dist/
+build/
+out/
+coverage/
+*.log
+
+# Python bytecode
+*.py[cod]
+__pycache__/
+*.so
+*.dylib
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env.bak/
+env/
+
+# Python-specific packaging
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.tgz
+*.bak
+*.manifest
+*.spec
+*.lock
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Pyre type checker
+.pyre/
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# JetBrains IDEs
+.idea/
+
+# Docker related files
+Dockerfile
+docker-compose.override.yml
+
+# Pytest
+.pytest_cache/
+htmlcov/
+.tox/
+
+# Jest
+/coverage/
+
+# Parcel
+.cache/
+.parcel-cache/
+
+# Lock files
+*.lock
